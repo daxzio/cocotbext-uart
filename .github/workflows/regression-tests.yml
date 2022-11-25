@@ -35,7 +35,7 @@ jobs:
 
     - name: Report Icarus Verilog
       run: |
-        iverilog -v
+        iverilog -V
 
     - name: Install Python dependencies
       run: |
