@@ -33,9 +33,9 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    #- name: Install Icarus Verilog
-    #  run: |
-    #    sudo apt install -y --no-install-recommends iverilog
+    - name: Report Icarus Verilog
+      run: |
+        iverilog -v
 
     - name: Install Python dependencies
       run: |
