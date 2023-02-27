@@ -24,4 +24,4 @@ THE SOFTWARE.
 
 from .version import __version__
 
-from .uart import UartSource, UartSink
+from .uart import UartSource, UartSink, FifoDriver, Mem2PDriver
