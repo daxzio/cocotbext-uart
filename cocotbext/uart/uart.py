@@ -52,7 +52,7 @@ class UartSource:
         self._idle = Event()
         self._idle.set()
 
-        self._data.setimmediatevalue(1)
+        self._data.value =1
 
         self.log.info("UART source configuration:")
         self.log.info("  Baud rate: %d bps", self._baud)
@@ -269,7 +269,7 @@ class UartSink:
             b = 0
             for k in range(bits):
                 await bit_t
-                b |= bool(data.value.integer) << k
+                b |= bool(data.value) << k
 
             # stop bit
             await stop_bit_t
