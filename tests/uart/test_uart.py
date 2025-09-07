@@ -92,7 +92,7 @@ def prbs_payload(length):
     return bytearray([next(gen) for x in range(length)])
 
 
-if cocotb.SIM_NAME:
+if hasattr(cocotb, 'top'):
 
     factory = TestFactory(run_test)
     factory.add_option("payload_lengths", [size_list])
