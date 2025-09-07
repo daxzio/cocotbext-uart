@@ -92,7 +92,7 @@ def prbs_payload(length):
     return bytearray([next(gen) for x in range(length)])
 
 
-if hasattr(cocotb, 'top'):
+if getattr(cocotb, 'top', None) is not None:
 
     factory = TestFactory(run_test)
     factory.add_option("payload_lengths", [size_list])
